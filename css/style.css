@@ -9,206 +9,242 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-align: center;
 }
 
 .clear-fix {
-  overflow: auto;
+    overflow: auto;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+    padding: 0 5%;
+    text-align: left;
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+    font-size: 40px;
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    color: #f0560b;
+    line-height: 48px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #999;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-style: italic;
+    font-size: 20px;
+  /*text-transform: uppercase;*/
+    color: #999;
+    line-height: 22px;
+    text-align: left;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+    padding: 10px 5%;
 }
 
+.project-entry h2,
+.project-entry h3,
+.project-entry h4,
+.project-entry h5 {
+    padding: 0;
+}
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    text-align: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
+    text-align: left;
 }
 
 a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+    color: #2f3132;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+div.date-text:last-child {
+    margin-bottom: 2.5%;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+    font-style: italic;
+    font-size: 1.8em;
+    color: #878484;
+    line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+    color: #f0560b;
+    display: none;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+.skillsText {
+    color: #f0560b;
 }
 
 .orange {
-  background-color: #f5ae23;
+    background-color: rgb(255, 255, 255);
+    color: #f0560b;
+    padding-top: 36px;
+    font-family: 'Poiret One', cursive;
 }
 
 .orange-text {
-  color: #f5ae23;
+    color: #f0560b;
 }
 
 .white-text {
-  font-weight: bold;
-  color: #fff;
+    font-weight: bold;
+    color: #878484;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
+    background-color: #f3f3f3;
+    padding-bottom: 0px;
+    clear: both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+#workExperience {
+    padding-bottom: 2.5%;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+/*.dark-gray {
+  /*background-color: rgba(50, 48, 47, 0.95);*/
+background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
+}
+
+.section-home,
+.section-footer {
+  /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+display: -webkit-flex;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 10px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
+list-style-type: none;
 }
 
 .biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+float: left;
+padding: 10px;
+width: 200px;
+display: none;
 }
 
 img {
-  padding: 10px;
+padding: 10px;
 }
 
 span {
-  padding: 5px;
+padding: 5px;
+color: #878484;
 }
 
 #lets-connect {
-  text-align: center;
+  /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/
+text-align: center;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
+#lets-connect {
     margin-top: 5%;
-  }
+}
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    };
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+    #skills-h3,
   .biopic {
-    display: block;
-  }
+        display: block;
+    };
 }
