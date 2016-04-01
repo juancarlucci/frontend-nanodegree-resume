@@ -156,50 +156,50 @@ div.date-text:last-child {
 
 /*.dark-gray {
   /*background-color: rgba(50, 48, 47, 0.95);*/
-background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
+   background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
 }
 
 .section-home,
 .section-footer {
-  /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
+  /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/
 }
 
 .flex-box {
-display: -webkit-flex;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .center-content {
-padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-list-style-type: none;
+    list-style-type: none;
 }
 
-.biopic {
-float: left;
-padding: 10px;
-width: 200px;
-display: none;
+.bioPic {
+    float: left;
+    padding: 10px;
+    width: 200px;
+    /*display: none;*/
 }
 
 img {
-padding: 10px;
+    padding: 10px;
 }
 
 span {
-padding: 5px;
-color: #878484;
+    padding: 5px;
+    color: #878484;
 }
 
 #lets-connect {
   /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/
-text-align: center;
+    text-align: center;
 }
 
 /* Media queries to handle various device widths */
@@ -208,10 +208,10 @@ text-align: center;
 #lets-connect {
     margin-top: 5%;
 }
-}
+
 
 @media only screen and (max-width:900px) {
-    .biopic {
+    .bioPic {
         width: 175px;
     };
 }
@@ -221,7 +221,7 @@ text-align: center;
         margin-top: 10%;
     }
 
-    .biopic {
+    .bioPic {
         width: 150px;
     }
 
@@ -244,7 +244,7 @@ text-align: center;
 
 @media only screen and (min-width: 750px) {
     #skills-h3,
-  .biopic {
+  .bioPic {
         display: block;
     };
 }

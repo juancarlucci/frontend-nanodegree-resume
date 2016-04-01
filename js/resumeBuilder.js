@@ -223,7 +223,7 @@ var projects = {
         "title" : "Classic Arcade Game",
         "dates" : "March 2016",
         "onelinePortfolio" : {
-          "description" : "Frogger, look out!. Single page responsive appliaction developed using Knockout.js. Hosted on GitHub.",
+          "description" : "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
           "skills" : "Object-Oriented JavaScript, HTML-5 Canvas",
           "portfolioPic" : "images/jc.jpg"
         }
@@ -317,4 +317,4 @@ var name = $("#name").text();
 
 $('#main').append(internationalizeButton);
 
-$("#mapDiv").append(googleMap); //not working!!!
+$("#mapDiv").append(googleMap);
