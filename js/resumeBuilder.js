@@ -136,7 +136,7 @@ education.display = function () {
     //for URL do we use "#" or "%data% ?"
     var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
     var formattedSchoolDegree = formattedSchool + formattedDegree;
-    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].date);
     var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 
     $("#education").append(HTMLschoolStart);

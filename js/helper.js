@@ -152,7 +152,7 @@ function initializeMap() {
 
     // initializes an empty array
     var locations = [];
-    console.log(locations);
+    console.log(locations); //for debugging
     // var lat = placeData.geometry.location.lat();  // latitude from the place service
     // var lon = placeData.geometry.location.lng();  // longitude from the place service
 
@@ -261,10 +261,10 @@ function initializeMap() {
   // function pinPoster(locations) {
   //     var service = new google.maps.places.PlacesService(map);
   //
-  //     for (var place in locations) {
-  //       var request = {
-  //         query: locations[place]
-  //       };
+      // for (var place in locations) {
+      //   var request = {
+      //     query: locations[place]
+      //   };
   //
   //       service.textSearch(request, callback);
   //     }
