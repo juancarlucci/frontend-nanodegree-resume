@@ -152,6 +152,9 @@ function initializeMap() {
 
     // initializes an empty array
     var locations = [];
+    console.log(locations);
+    // var lat = placeData.geometry.location.lat();  // latitude from the place service
+    // var lon = placeData.geometry.location.lng();  // longitude from the place service
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
@@ -192,9 +195,9 @@ function initializeMap() {
     var marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
-      title: name,
+      title: name
       // zoom: 13,
-      animation:google.maps.Animation.BOUNCE
+      // animation:google.maps.Animation.BOUNCE
     });
 
     // infoWindows are the little helper windows that open when you click
@@ -207,7 +210,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       infoWindow.open(map, marker);// your code goes here!
-      map.setZoom(9);// your code goes here!
+      // map.setZoom(9);// your code goes here!
     });
 
     // this is where the pin actually gets added to the map.
@@ -228,6 +231,9 @@ function initializeMap() {
       //checks that what got retuned is an actual location. Then passes the first of such locations [0].
       createMapMarker(results[0]);
     }
+    // else {
+    // console.log(status); //as per Udayan, Forum Mentor
+    // }
   }
 
   /*
@@ -252,6 +258,18 @@ function initializeMap() {
       service.textSearch(request, callback);
     });
   }
+  // function pinPoster(locations) {
+  //     var service = new google.maps.places.PlacesService(map);
+  //
+  //     for (var place in locations) {
+  //       var request = {
+  //         query: locations[place]
+  //       };
+  //
+  //       service.textSearch(request, callback);
+  //     }
+  //   }
+
 
   // Sets the boundaries of the map based on pin locations
   window.mapBounds = new google.maps.LatLngBounds();
