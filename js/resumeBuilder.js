@@ -1,21 +1,16 @@
-var bio = {
-   "name": "Juan Carlos",
-   "role": "Web Developer",
-   "contacts": {
-      "mobile": "555-555-555",
-      "email": "juancarloscollins@gmail.com",
-      "linkedin": "juan-carlos-collins/20/883/b89",
-      "github": "juancarlucci",
-      "location": "san francisco, ca"
-   },
-   "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
-   "skills": [
-      "HTML/CSS",
-      "JavaScript",
-      "Teaching",
-      "AJAX"
-   ],
-   "bioPic": "images/jc.jpg"
+var bio = {   
+    "name": "Juan Carlos",
+       "role": "Web Developer",
+       "contacts": {      
+        "mobile": "555-555-555",
+              "email": "juancarloscollins@gmail.com",
+              "linkedin": "juan-carlos-collins/20/883/b89",
+              "github": "juancarlucci",
+              "location": "san francisco, ca"   
+    },
+       "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
+       "skills": [      "HTML/CSS",       "JavaScript",       "Teaching",       "AJAX"   ],
+       "bioPic": "images/jc.jpg"
 };
 
 bio.display = function() {
@@ -56,148 +51,131 @@ bio.display = function() {
 };
 bio.display();
 
-var education = {
-   "schools": [
-      {
-         "name": "American College of Traditional Chinese Medicine",
+var education = {   
+    "schools": [      {         
+        "name": "American College of Traditional Chinese Medicine",
         "location": "San Francisco, CA",
-         "degree": "MA",
-         "major": ["Chinese Medicine"],
-         "date": "2003-2007",
-         "url": "https://www.actcm.edu/"
-      },
-      {
-         "name": "Pomona College",
-         "location": "Claremont, CA",
-         "degree": "BA",
-         "major": ["International Relations"],
-         "date": "1988-1992",
-         "url": "http://www.pomona.edu/"
-      }
-   ],
-   "onlineCourses": [
-      {
-         "title": "Front End Nanodegree",
-         "school": "Udacity",
-         "date": "December 2015 - September 2016",
-         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-      },
-      {
-         "title": "Intro to JS: Drawing & Animation",
-         "school": "Khan Academy",
-         "date": "January 2016",
-         "url": "https://www.khanacademy.org/computing/computer-programming/programming"
-      },
-      {
-         "title": "Intro to HTML and CSS",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
-      },
-      {
-         "title": "Responsive Web Design Fundementals",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud893"
-      },
-      {
-         "title": "Responsive Images",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud882"
-      },
-      {
-         "title": "How to Use Git and GitHub",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud775"
-      },
-      {
-         "title": "JavaScript Basics",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud804"
-      },
-      {
-         "title": "CS50: Introduction to Computer Science",
-         "school": "Harvard",
-         "date": "2015",
-         "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"
-      }
-   ]
+                 "degree": "MA",
+                 "major": ["Chinese Medicine"],
+                 "date": "2003-2007",
+                 "url": "https://www.actcm.edu/"      
+    },        {         
+        "name": "Pomona College",
+        "location": "Claremont, CA",
+                 "degree": "BA",
+                 "major": ["International Relations"],
+                 "date": "1988-1992",
+                 "url": "http://www.pomona.edu/"      
+    }   ],
+       "onlineCourses": [      {         
+        "title": "Front End Nanodegree",
+                 "school": "Udacity",
+                 "date": "December 2015 - September 2016",
+                 "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
+    },        {         
+        "title": "Intro to JS: Drawing & Animation",
+                 "school": "Khan Academy",
+                 "date": "January 2016",
+                 "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
+    },        {         
+        "title": "Intro to HTML and CSS",
+                 "school": "Udacity",
+                 "date": "2015",
+                 "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
+    },        {         
+        "title": "Responsive Web Design Fundementals",
+                 "school": "Udacity",
+                 "date": "2015",
+                 "url": "https://www.udacity.com/courses/ud893"      
+    },        {         
+        "title": "Responsive Images",
+                 "school": "Udacity",
+                 "date": "2015",
+                 "url": "https://www.udacity.com/courses/ud882"      
+    },        {         
+        "title": "How to Use Git and GitHub",
+                 "school": "Udacity",
+                 "date": "2015",
+                 "url": "https://www.udacity.com/courses/ud775"      
+    },        {         
+        "title": "JavaScript Basics",
+                 "school": "Udacity",
+                 "date": "2015",
+                 "url": "https://www.udacity.com/courses/ud804"      
+    },        {         
+        "title": "CS50: Introduction to Computer Science",
+                 "school": "Harvard",
+                 "date": "2015",
+                 "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
+    }   ]
 };
 
-education.display = function () {
+education.display = function() {
 
-  for (var school in education.schools) {
-    $("#education").append(HTMLschoolStart);
-    var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
-    var formattedSchoolUrl = HTMLschoolURL.replace("#", education.schools[school].url);
-    //for URL do we use "#" or "%data% ?"
-    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    var formattedSchoolDegree = formattedSchool + formattedDegree;
-    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].date);
-    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+    for (var school in education.schools) {
+        $("#education").append(HTMLschoolStart);
+        var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
+        var formattedSchoolUrl = HTMLschoolURL.replace("#", education.schools[school].url);
+        //for URL do we use "#" or "%data% ?"
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formattedSchoolDegree = formattedSchool + formattedDegree;
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].date);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
 
-    $("#education").append(HTMLschoolStart);
-    $(".education-entry:last").append(formattedSchoolDegree);
-    $(".education-entry:last").append(formattedDates);
-    $(".education-entry:last").append(formattedMajor);
+        $("#education").append(HTMLschoolStart);
+        $(".education-entry:last").append(formattedSchoolDegree);
+        $(".education-entry:last").append(formattedDates);
+        $(".education-entry:last").append(formattedMajor);
     }
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLschoolStart);
     for (var onlineCourse in education.onlineCourses) {
-      var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-      var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
 
-      var formattedOnlineTitleOnlineSchool = formattedOnlineTitle + formattedOnlineSchool;
-      var formattedOnlineURL = HTMLonlineURL.replace("#", education.onlineCourses[onlineCourse].url);
+        var formattedOnlineTitleOnlineSchool = formattedOnlineTitle + formattedOnlineSchool;
+        var formattedOnlineURL = HTMLonlineURL.replace("#", education.onlineCourses[onlineCourse].url);
 
-      $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-      var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
-      $(".education-entry:last").append(formattedOnlineDates);
-      // var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-      // $(".education-entry:last").append(formattedURL);
+        $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
+        $(".education-entry:last").append(formattedOnlineDates);
+        // var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+        // $(".education-entry:last").append(formattedURL);
 
     }
 };
 education.display();
 
-var work = {
-   "jobs": [
-      {
-         "employer": "Juan Carlos Acupuncture",
-         "title": "Owner",
-         "location": "San Francisco, CA",
-         "dates": "2008-current",
-         "description": "Provide primary care through acupuncture and Chinese Medicine"
-      },
-      {
-         "employer": "Academy of Chinese Culture and Halth Sciences",
-         "title": "Associate Professor",
-         "location": "Oakland, CA",
-         "dates": "2008-2013",
-         "description": "Taught Chinese Medicine, Herbology, Formulas"
-      },
-      {
-         "employer": "Center for Ecoliteracy",
-         "title": "Curriculum Coordinator",
-         "location": "Berkeley, CA",
-         "dates": "2000-2003",
-         "description": "Worked closely with CEL’s Director, founding members (including Fritjof Capra), and main investors to develop content, programs and strategies."
-      },
-      {
-         "employer": "Cesar Chavez Elementary School",
-         "title": "Grant Writer/Curriculum Developer/Teacher",
-         "location": "San Francisco, CA",
-         "dates": "1996-2000",
-         "description": "Lead teacher, curriculum developer and grant writer for a three year, 6-teacher team project"
-      }
-   ]
+var work = {   
+    "jobs": [      {         
+        "employer": "Juan Carlos Acupuncture",
+                 "title": "Owner",
+                 "location": "San Francisco, CA",
+                 "dates": "2008-current",
+                 "description": "Provide primary care through acupuncture and Chinese Medicine"      
+    },        {         
+        "employer": "Academy of Chinese Culture and Halth Sciences",
+                 "title": "Associate Professor",
+                 "location": "Oakland, CA",
+                 "dates": "2008-2013",
+                 "description": "Taught Chinese Medicine, Herbology, Formulas"      
+    },        {         
+        "employer": "Center for Ecoliteracy",
+                 "title": "Curriculum Coordinator",
+                 "location": "Berkeley, CA",
+                 "dates": "2000-2003",
+                 "description": "Worked closely with CEL’s Director, founding members (including Fritjof Capra), and main investors to develop content, programs and strategies."      
+    },        {         
+        "employer": "Cesar Chavez Elementary School",
+                 "title": "Grant Writer/Curriculum Developer/Teacher",
+                 "location": "San Francisco, CA",
+                 "dates": "1996-2000",
+                 "description": "Lead teacher, curriculum developer and grant writer for a three year, 6-teacher team project"      
+    }   ]
 };
 work.display = function() {
     for (var job in work.jobs) {
-    // work.jobs.forEach(function(job, index) {
+        // work.jobs.forEach(function(job, index) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -207,78 +185,73 @@ work.display = function() {
         $(".work-entry:last").append(formattedDates);
         var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
         $('.work-entry:last').append(formattedDescription);
-      }
+    }
     // });
 };
 work.display();
 
 var projects = {
-  "projects": [{
-        "title" : "Online Resume",
-        "dates" : "January 2016",
-        "description" : "A showcase of my front-end work",
-        "skills" : "JavaScript, HTML, CSS",
-        "images" : ["http://placehold.it/350x150"]
+    "projects": [{
+        "title": "Online Resume",
+        "dates": "January 2016",
+        "description": "A showcase of my front-end work",
+        "skills": "JavaScript, HTML, CSS",
+        "images": ["http://placehold.it/350x150"]
 
-      },
-      {
-        "title" : "Classic Arcade Game",
-        "dates" : "March 2016",
-        "description" : "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
-        "skills" : "Object-Oriented JavaScript, HTML-5 Canvas",
-        "images" : ["http://placehold.it/350x150"]
-        },
-        {
-        "title" : "Web Optimization",
-        "dates" : "May 2016",
-        "description" : "Web performance optimization (WPO), Browser Rendering",
-        "skills" : "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
-        "images" : ["http://placehold.it/350x150"]
-        },
-        {
-          "title" : "Neighborhood Map",
-          "dates" : "June 2016",
-          "description" : "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
-          "skills" : "AJAX, JavaScript Design Patterns",
-          "images" : ["http://placehold.it/350x150"]
-          },
-        {
-          "title" : "Health Tracker",
-          "dates" : "December, 2015-2016",
-          "description" : "A single page tracker for health-related metrics",
-          "skills" : "Backbone.js",
-          "images" : ["http://placehold.it/350x150"]
-          },
-        {
-        "title" : "Feed Reader Testing",
-        "dates" : "December, 2015-2016",
-        "description" : "Implementation of 'test-driven development' or TDD",
-        "skills" : "JavaScript Testing",
-        "images" : ["http://placehold.it/350x150"]
+    }, {
+        "title": "Classic Arcade Game",
+        "dates": "March 2016",
+        "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
+        "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
+        "images": ["http://placehold.it/350x150"]
+    }, {
+        "title": "Web Optimization",
+        "dates": "May 2016",
+        "description": "Web performance optimization (WPO), Browser Rendering",
+        "skills": "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
+        "images": ["http://placehold.it/350x150"]
+    }, {
+        "title": "Neighborhood Map",
+        "dates": "June 2016",
+        "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
+        "skills": "AJAX, JavaScript Design Patterns",
+        "images": ["http://placehold.it/350x150"]
+    }, {
+        "title": "Health Tracker",
+        "dates": "December, 2015-2016",
+        "description": "A single page tracker for health-related metrics",
+        "skills": "Backbone.js",
+        "images": ["http://placehold.it/350x150"]
+    }, {
+        "title": "Feed Reader Testing",
+        "dates": "December, 2015-2016",
+        "description": "Implementation of 'test-driven development' or TDD",
+        "skills": "JavaScript Testing",
+        "images": ["http://placehold.it/350x150"]
 
-      }]
+    }]
 };
 
 projects.display = function() {
-        for (var project in projects.projects) {
-            $("#projects").append(HTMLprojectStart);
-            var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-            $(".project-entry:last").append(formattedTitle);
-            var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-            $(".project-entry:last").append(formattedDates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-            $(".project-entry:last").append(formattedDescription);
-            var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
-            $(".project-entry:last").append(formattedSkills);
+    for (var project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedDescription);
+        var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
+        $(".project-entry:last").append(formattedSkills);
 
-            if (projects.projects[project].images.length > 0) {
-                for (var image in projects.projects[project].images) {
-                    var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-                    $(".project-entry:last").append(formattedImage);
-                }
+        if (projects.projects[project].images.length > 0) {
+            for (var image in projects.projects[project].images) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                $(".project-entry:last").append(formattedImage);
             }
+        }
     }
-  };
+};
 projects.display();
 
 
@@ -297,13 +270,13 @@ projects.display();
 // $('#main').append(internationalizeButton);
 // Here is the code from mcsLeader
 function inName() {
-  var name = window.name;
-  name = name.trim().split(" ");
-  console.log(name);
-  name[1] = name[1].toUpperCase();
-  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+    var name = window.name;
+    name = name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
 
-  return name[0] +" "+ name[1];
+    return name[0] + " " + name[1];
 }
 
 var name = $("#name").text();
