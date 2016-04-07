@@ -60,16 +60,18 @@ var education = {
    "schools": [
       {
          "name": "American College of Traditional Chinese Medicine",
+        "location": "San Francisco, CA",
          "degree": "MA",
-         "major": "Chinese Medicine",
-         "dates": "2003-2007",
+         "major": ["Chinese Medicine"],
+         "date": "2003-2007",
          "url": "https://www.actcm.edu/"
       },
       {
          "name": "Pomona College",
+         "location": "Claremont, CA",
          "degree": "BA",
-         "major": "International Relations",
-         "dates": "1988-1992",
+         "major": ["International Relations"],
+         "date": "1988-1992",
          "url": "http://www.pomona.edu/"
       }
    ],
@@ -77,49 +79,49 @@ var education = {
       {
          "title": "Front End Nanodegree",
          "school": "Udacity",
-         "dates": "December 2015 - September 2016",
+         "date": "December 2015 - September 2016",
          "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
       },
       {
          "title": "Intro to JS: Drawing & Animation",
          "school": "Khan Academy",
-         "dates": "January 2016",
+         "date": "January 2016",
          "url": "https://www.khanacademy.org/computing/computer-programming/programming"
       },
       {
          "title": "Intro to HTML and CSS",
          "school": "Udacity",
-         "dates": "2015",
+         "date": "2015",
          "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
       },
       {
          "title": "Responsive Web Design Fundementals",
          "school": "Udacity",
-         "dates": "2015",
+         "date": "2015",
          "url": "https://www.udacity.com/courses/ud893"
       },
       {
          "title": "Responsive Images",
          "school": "Udacity",
-         "dates": "2015",
+         "date": "2015",
          "url": "https://www.udacity.com/courses/ud882"
       },
       {
          "title": "How to Use Git and GitHub",
          "school": "Udacity",
-         "dates": "2015",
+         "date": "2015",
          "url": "https://www.udacity.com/courses/ud775"
       },
       {
          "title": "JavaScript Basics",
          "school": "Udacity",
-         "dates": "2015",
+         "date": "2015",
          "url": "https://www.udacity.com/courses/ud804"
       },
       {
          "title": "CS50: Introduction to Computer Science",
          "school": "Harvard",
-         "dates": "2015",
+         "date": "2015",
          "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"
       }
    ]
@@ -128,7 +130,7 @@ var education = {
 education.display = function () {
 
   for (var school in education.schools) {
-    $("#education").append(HTMLschoolStart);//is this right?
+    $("#education").append(HTMLschoolStart);
     var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
     var formattedSchoolUrl = HTMLschoolURL.replace("#", education.schools[school].url);
     //for URL do we use "#" or "%data% ?"
@@ -195,6 +197,7 @@ var work = {
 };
 work.display = function() {
     for (var job in work.jobs) {
+    // work.jobs.forEach(function(job, index) {
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
         var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -202,10 +205,10 @@ work.display = function() {
         $(".work-entry:last").append(formattedEmployerTitle);
         var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
         $(".work-entry:last").append(formattedDates);
-
         var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
         $('.work-entry:last').append(formattedDescription);
-    }
+      }
+    // });
 };
 work.display();
 
@@ -213,56 +216,46 @@ var projects = {
   "projects": [{
         "title" : "Online Resume",
         "dates" : "January 2016",
-        "onelinePortfolio" : {
-          "description" : "A showcase of my front-end work",
-          "skills" : "JavaScript, HTML, CSS",
-          "portfolioPic" : "images/jc.jpg"
-        }
+        "description" : "A showcase of my front-end work",
+        "skills" : "JavaScript, HTML, CSS",
+        "images" : ["http://placehold.it/350x150"]
+
       },
       {
         "title" : "Classic Arcade Game",
         "dates" : "March 2016",
-        "onelinePortfolio" : {
-          "description" : "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
-          "skills" : "Object-Oriented JavaScript, HTML-5 Canvas",
-          "portfolioPic" : "images/jc.jpg"
-        }
+        "description" : "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
+        "skills" : "Object-Oriented JavaScript, HTML-5 Canvas",
+        "images" : ["http://placehold.it/350x150"]
         },
         {
         "title" : "Web Optimization",
         "dates" : "May 2016",
-        "onelinePortfolio" : {
-          "description" : "Web performance optimization (WPO), Browser Rendering",
-          "skills" : "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
-          "portfolioPic" : "images/jc.jpg"
-        }
+        "description" : "Web performance optimization (WPO), Browser Rendering",
+        "skills" : "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
+        "images" : ["http://placehold.it/350x150"]
         },
         {
           "title" : "Neighborhood Map",
           "dates" : "June 2016",
-          "onelinePortfolio" : {
-            "description" : "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
-            "skills" : "AJAX, JavaScript Design Patterns",
-            "portfolioPic" : "images/jc.jpg"
-          }
+          "description" : "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
+          "skills" : "AJAX, JavaScript Design Patterns",
+          "images" : ["http://placehold.it/350x150"]
           },
         {
           "title" : "Health Tracker",
           "dates" : "December, 2015-2016",
-          "onelinePortfolio" : {
-            "description" : "A single page tracker for health-related metrics",
-            "skills" : "Backbone.js",
-            "portfolioPic" : "images/jc.jpg"
-          }
+          "description" : "A single page tracker for health-related metrics",
+          "skills" : "Backbone.js",
+          "images" : ["http://placehold.it/350x150"]
           },
         {
         "title" : "Feed Reader Testing",
         "dates" : "December, 2015-2016",
-        "onelinePortfolio" : {
-          "description" : "Implementation of 'test-driven development' or TDD",
-          "skills" : "JavaScript Testing",
-          "portfolioPic" : "images/jc.jpg"
-        }
+        "description" : "Implementation of 'test-driven development' or TDD",
+        "skills" : "JavaScript Testing",
+        "images" : ["http://placehold.it/350x150"]
+
       }]
 };
 
@@ -273,19 +266,19 @@ projects.display = function() {
             $(".project-entry:last").append(formattedTitle);
             var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
             $(".project-entry:last").append(formattedDates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].onelinePortfolio.description);
+            var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
             $(".project-entry:last").append(formattedDescription);
-            var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].onelinePortfolio.skills);
+            var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
             $(".project-entry:last").append(formattedSkills);
 
-            // if (projects.projects[project].images.length > 0) {
-            //     for (image in projects.projects[project].images) {
-            //         var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-            //         $(".project-entry:last").append(formattedImage);
-            //     }
-
-        }
-    };
+            if (projects.projects[project].images.length > 0) {
+                for (var image in projects.projects[project].images) {
+                    var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                    $(".project-entry:last").append(formattedImage);
+                }
+            }
+    }
+  };
 projects.display();
 
 
