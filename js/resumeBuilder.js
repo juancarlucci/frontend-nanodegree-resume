@@ -154,7 +154,7 @@ education.display = function () {
       var formattedOnlineURL = HTMLonlineURL.replace("#", education.onlineCourses[onlineCourse].url);
 
       $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-      var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
+      var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
       $(".education-entry:last").append(formattedOnlineDates);
       // var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
       // $(".education-entry:last").append(formattedURL);
