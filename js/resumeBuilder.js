@@ -111,17 +111,16 @@ var education = {   
 };
 
 education.display = function() {
-
-    for (var school in education.schools) {
+  education.schools.forEach(function(school, index) {
+      if (education.schools.length > 0) {
         $("#education").append(HTMLschoolStart);
-        var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name);
-        var formattedSchoolUrl = HTMLschoolURL.replace("#", education.schools[school].url);
+        var formattedSchool = HTMLschoolName.replace("%data%", school.name);
+        var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
         //for URL do we use "#" or "%data% ?"
-        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedSchoolDegree = formattedSchool + formattedDegree;
-        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].date);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-
+        var formattedDates = HTMLschoolDates.replace("%data%", school.date);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
         $("#education").append(HTMLschoolStart);
         $(".education-entry:last").append(formattedSchoolDegree);
         $(".education-entry:last").append(formattedDates);
@@ -129,21 +128,20 @@ education.display = function() {
     }
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLschoolStart);
-    for (var onlineCourse in education.onlineCourses) {
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
 
+  });
+  education.onlineCourses.forEach(onlineCourse) {
+      if (education.onlineCourses.length > 0) {
+        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
+        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
         var formattedOnlineTitleOnlineSchool = formattedOnlineTitle + formattedOnlineSchool;
-        var formattedOnlineURL = HTMLonlineURL.replace("#", education.onlineCourses[onlineCourse].url);
-
+        var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
         $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].date);
+        var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
         $(".education-entry:last").append(formattedOnlineDates);
-        // var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
-        // $(".education-entry:last").append(formattedURL);
-
+      }
     }
-};
+  };
 education.display();
 
 var work = {   
@@ -174,19 +172,25 @@ var work = {   
     }   ]
 };
 work.display = function() {
-    for (var job in work.jobs) {
-        // work.jobs.forEach(function(job, index) {
+
+// https://discussions.udacity.com/t/foreach-trouble/160070/7
+work.jobs.forEach(function(job, index) {
+    if (work.jobs.length > 0) {
         $("#workExperience").append(HTMLworkStart);
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+
+        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
         $(".work-entry:last").append(formattedEmployerTitle);
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+
+        var formattedDates = HTMLworkDates.replace("%data%", job.dates);
         $(".work-entry:last").append(formattedDates);
-        var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-        $('.work-entry:last').append(formattedDescription);
+
+        var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+        $(".work-entry:last").append(formattedDescription);
     }
-    // });
+  });
 };
 work.display();
 

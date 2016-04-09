@@ -55,24 +55,25 @@
          resume below. You can pretty easily figure out what each section will
          display by looking at the id or at what's written between the <h2> tags.
          -->
-      <div class="section-home">
+      <!-- <div class="section-home"> -->
          <div id="header" class="center-content clear-fix">
             <ul id="topContacts" class="flex-box"></ul>
-         </div>
+         <!-- </div> -->
       </div>
       <div style="clear: both;"></div>
-      <!-- original education section
+      <!-- original education section -->
          <div id="education" class="gray">
            <h2>Education</h2>
-         </div> -->
+         </div>
+
       <!-- changed education section to list view from Bootstrap -->
-      <div class="container-fluid">
+      <!-- <div class="container-fluid">
          <div class="row">
             <div id="education" class="gray list-group">
                <h2 class="list-group-item-heading">Education</h2>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- end of list group education -->
       <div id="projects" class="online list-group">
          <h2>Projects</h2>
@@ -144,7 +145,7 @@
       if(document.getElementsByClassName('flex-item').length === 0) {
         document.getElementById('lets-connect').style.backgroundColor = 'black';
       }
-      if(document.getElementById('mapDiv') === null) {
+      if(document.getElementById('map') === null) {
         document.getElementById('mapDiv').style.backgroundColor = 'black';
       }
    </script>
