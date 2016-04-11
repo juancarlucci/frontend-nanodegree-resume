@@ -101,7 +101,7 @@ function logClicks(x, y) {
         x: x,
         y: y
     });
-    console.log('x location: ' + x + '; y location: ' + y);
+    // console.log('x location: ' + x + '; y location: ' + y);
 }
 
 $(document).click(function(loc) {

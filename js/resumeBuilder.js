@@ -53,12 +53,12 @@ bio.display();
 
 var education = {   
     "schools": [      {         
-        "name": "American College of Traditional Chinese Medicine",
-        "location": "San Francisco, CA",
-                 "degree": "MA",
-                 "major": ["Chinese Medicine"],
-                 "date": "2003-2007",
-                 "url": "https://www.actcm.edu/"      
+         "name": "American College of Traditional Chinese Medicine",
+         "location": "San Francisco, CA",
+         "degree": "MA",
+         "major": ["Chinese Medicine"],
+         "date": "2003-2007",
+         "url": "https://www.actcm.edu/"      
     },        {         
         "name": "Pomona College",
         "location": "Claremont, CA",
@@ -116,7 +116,6 @@ education.display = function() {
         $("#education").append(HTMLschoolStart);
         var formattedSchool = HTMLschoolName.replace("%data%", school.name);
         var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
-        //for URL do we use "#" or "%data% ?"
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedSchoolDegree = formattedSchool + formattedDegree;
         var formattedDates = HTMLschoolDates.replace("%data%", school.date);
@@ -126,11 +125,11 @@ education.display = function() {
         $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedMajor);
     }
-    $("#education").append(HTMLonlineClasses);
-    $("#education").append(HTMLschoolStart);
 
-  });
-  education.onlineCourses.forEach(onlineCourse) {
+    $("#education").append(HTMLschoolStart);
+});
+  $("#education").append(HTMLonlineClasses);
+  education.onlineCourses.forEach(function(onlineCourse) {
       if (education.onlineCourses.length > 0) {
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
@@ -140,8 +139,8 @@ education.display = function() {
         var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
         $(".education-entry:last").append(formattedOnlineDates);
       }
-    }
-  };
+    });
+};
 education.display();
 
 var work = {   
@@ -152,7 +151,7 @@ var work = {   
                  "dates": "2008-current",
                  "description": "Provide primary care through acupuncture and Chinese Medicine"      
     },        {         
-        "employer": "Academy of Chinese Culture and Halth Sciences",
+        "employer": "Academy of Chinese Culture and Health Sciences",
                  "title": "Associate Professor",
                  "location": "Oakland, CA",
                  "dates": "2008-2013",
