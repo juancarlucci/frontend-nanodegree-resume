@@ -4,7 +4,7 @@ var bio = {   
        "contacts": {      
         "mobile": "555-555-555",
               "email": "juancarloscollins@gmail.com",
-              "linkedin": "juan-carlos-collins/20/883/b89",
+        //       "linkedin": "juan-carlos-collins/20/883/b89",
               "github": "juancarlucci",
               "location": "san francisco, ca"   
     },
@@ -32,9 +32,9 @@ bio.display = function() {
     var formattedbioGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedbioGithub);
     $("#footerContacts").append(formattedbioGithub);
-    var formattedbioLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
-    $("#topContacts").append(formattedbioLinkedin);
-    $("#footerContacts").append(formattedbioLinkedin);
+    // var formattedbioLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+    // $("#topContacts").append(formattedbioLinkedin);
+    // $("#footerContacts").append(formattedbioLinkedin);
     var formattedbioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedbioLocation);
     if (bio.skills.length > 0) {
@@ -62,51 +62,51 @@ var education = {   
     },        {         
         "name": "Pomona College",
         "location": "Claremont, CA",
-                 "degree": "BA",
-                 "major": ["International Relations"],
-                 "date": "1988-1992",
-                 "url": "http://www.pomona.edu/"      
+         "degree": "BA",
+         "major": ["International Relations"],
+         "date": "1988-1992",
+         "url": "http://www.pomona.edu/"      
     }   ],
-       "onlineCourses": [      {         
+     "onlineCourses": [      {         
         "title": "Front End Nanodegree",
-                 "school": "Udacity",
-                 "date": "December 2015 - September 2016",
-                 "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
+         "school": "Udacity",
+         "date": "December 2015 - September 2016",
+         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
     },        {         
         "title": "Intro to JS: Drawing & Animation",
-                 "school": "Khan Academy",
-                 "date": "January 2016",
-                 "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
+         "school": "Khan Academy",
+         "date": "January 2016",
+         "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
     },        {         
         "title": "Intro to HTML and CSS",
-                 "school": "Udacity",
-                 "date": "2015",
-                 "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
     },        {         
         "title": "Responsive Web Design Fundementals",
-                 "school": "Udacity",
-                 "date": "2015",
-                 "url": "https://www.udacity.com/courses/ud893"      
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud893"      
     },        {         
         "title": "Responsive Images",
-                 "school": "Udacity",
-                 "date": "2015",
-                 "url": "https://www.udacity.com/courses/ud882"      
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud882"      
     },        {         
         "title": "How to Use Git and GitHub",
-                 "school": "Udacity",
-                 "date": "2015",
-                 "url": "https://www.udacity.com/courses/ud775"      
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud775"      
     },        {         
         "title": "JavaScript Basics",
-                 "school": "Udacity",
-                 "date": "2015",
-                 "url": "https://www.udacity.com/courses/ud804"      
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud804"      
     },        {         
         "title": "CS50: Introduction to Computer Science",
-                 "school": "Harvard",
-                 "date": "2015",
-                 "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
+         "school": "Harvard",
+         "date": "2015",
+         "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
     }   ]
 };
 
@@ -115,7 +115,7 @@ education.display = function() {
       if (education.schools.length > 0) {
         $("#education").append(HTMLschoolStart);
         var formattedSchool = HTMLschoolName.replace("%data%", school.name);
-        var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
+        // var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedSchoolDegree = formattedSchool + formattedDegree;
         var formattedDates = HTMLschoolDates.replace("%data%", school.date);
@@ -127,8 +127,9 @@ education.display = function() {
     }
 
     $("#education").append(HTMLschoolStart);
+    $("#education").append(HTMLonlineClasses);
+
 });
-  $("#education").append(HTMLonlineClasses);
   education.onlineCourses.forEach(function(onlineCourse) {
       if (education.onlineCourses.length > 0) {
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
@@ -244,8 +245,8 @@ projects.display = function() {
         $(".project-entry:last").append(formattedDates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
-        var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
-        $(".project-entry:last").append(formattedSkills);
+        // var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
+        // $(".project-entry:last").append(formattedSkills);
 
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
