@@ -4,7 +4,7 @@ var bio = {   
        "contacts": {      
         "mobile": "555-555-555",
               "email": "juancarloscollins@gmail.com",
-        //       "linkedin": "juan-carlos-collins/20/883/b89",
+              "linkedin": "juan-carlos-collins/20/883/b89",
               "github": "juancarlucci",
               "location": "san francisco, ca"   
     },
@@ -32,9 +32,9 @@ bio.display = function() {
     var formattedbioGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedbioGithub);
     $("#footerContacts").append(formattedbioGithub);
-    // var formattedbioLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
-    // $("#topContacts").append(formattedbioLinkedin);
-    // $("#footerContacts").append(formattedbioLinkedin);
+    var formattedbioLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+    $("#topContacts").append(formattedbioLinkedin);
+    $("#footerContacts").append(formattedbioLinkedin);
     var formattedbioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedbioLocation);
     if (bio.skills.length > 0) {
@@ -115,7 +115,7 @@ education.display = function() {
       if (education.schools.length > 0) {
         $("#education").append(HTMLschoolStart);
         var formattedSchool = HTMLschoolName.replace("%data%", school.name);
-        // var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
+        var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedSchoolDegree = formattedSchool + formattedDegree;
         var formattedDates = HTMLschoolDates.replace("%data%", school.date);
