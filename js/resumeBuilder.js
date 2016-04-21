@@ -124,12 +124,12 @@ education.display = function() {
         $(".education-entry:last").append(formattedSchoolDegree);
         $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedMajor);
+        $("#education").append(HTMLschoolStart);
+        $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
     }
-
-    $("#education").append(HTMLschoolStart);
-    $("#education").append(HTMLonlineClasses);
-
+// $("#education").append(HTMLonlineClasses);// displays twice, once in between Pomona and ACTCM, once at end of edu section
 });
+// $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
   education.onlineCourses.forEach(function(onlineCourse) {
       if (education.onlineCourses.length > 0) {
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
@@ -142,6 +142,7 @@ education.display = function() {
       }
     });
 };
+
 education.display();
 
 var work = {   
