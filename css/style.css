@@ -14,6 +14,7 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     text-align: center;
+    height: 100%;
 }
 
 .clear-fix {
@@ -154,16 +155,6 @@ div.date-text:last-child {
     padding-bottom: 2.5%;
 }
 
-/*.dark-gray {
-  /*background-color: rgba(50, 48, 47, 0.95);*/
-   background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/;
-}
-
-.section-home,
-.section-footer {
-  /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/
-}
-
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -205,46 +196,44 @@ span {
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-#lets-connect {
+  #lets-connect {
     margin-top: 5%;
+  }
 }
 
-
 @media only screen and (max-width:900px) {
-    .bioPic {
-        width: 175px;
-    };
+  .biopic {
+    width: 175px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-    #lets-connect {
-        margin-top: 10%;
-    }
-
-    .bioPic {
-        width: 150px;
-    }
-
-    .welcome-message {
-        display: none;
-    };
+  #lets-connect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
 }
 
 #map {
-    display: block;
-    height: 100%;
-    margin: 0 5%;
+  display: block;
+  height: 100%;
+  margin: 0 5%;
 }
 
 #mapDiv {
-    height: 400px;
-    width: 100%;
-    padding-bottom: 5%;
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-    #skills-h3,
-  .bioPic {
-        display: block;
-    };
+  #skills-h3,
+  .biopic {
+    display: block;
+  }
 }
