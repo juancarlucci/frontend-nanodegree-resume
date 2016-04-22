@@ -14,7 +14,6 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     text-align: center;
-    height: 100%;
 }
 .clear-fix {
     overflow: auto;
@@ -93,6 +92,7 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+    /*display: inline;*/ //this is an atempt to get email link to send email
 }
 div.date-text:last-child {
     margin-bottom: 2.5%;
