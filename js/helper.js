@@ -16,6 +16,7 @@ var HTMLheaderRole = '<span>%data%</span><hr>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
+// var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><a href="mailto:%data%"><span class="white-text">%data%</span></a></li>'; //this is an atempt to get email link to send email
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
 var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><span class="white-text">%data%</span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
@@ -33,10 +34,11 @@ var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><small><br>%data%</small></p>';
+var HTMLworkDescription = '<p><small>%data%</small><br><br></p>';
 
 var HTMLprojectStart = '<div class="online list-group project-entry"></div>';
 var HTMLprojectTitle = '<h3>%data%</h3>';
+// var HTMLprojectTitle = '<a href="%url%">%data%</a>'; //this is an attemt to link to my github pages
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectSkills = '<p class="skillsText">Skills: %data%</p>';
