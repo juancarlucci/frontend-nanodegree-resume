@@ -1,5 +1,5 @@
 var bio = {   
-    "name": "Juan Carlos",
+    "name": "Juan Carlos Collins",
        "role": "Web Developer",
        "contacts": {      
         "mobile": "555-555-555",
@@ -125,7 +125,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedDates);
         $(".education-entry:last").append(formattedMajor);
         $("#education").append(HTMLschoolStart);
-        $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
+        // $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
     }
 // $("#education").append(HTMLonlineClasses);// displays twice, once in between Pomona and ACTCM, once at end of edu section
 });
@@ -141,6 +141,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedOnlineDates);
       }
     });
+
 };
 
 education.display();
@@ -241,6 +242,7 @@ projects.display = function() {
     for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        // var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("%url%", projects.projects[project].url);
         $(".project-entry:last").append(formattedTitle);
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
