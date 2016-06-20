@@ -10,7 +10,7 @@ var bio = {   
     },
        "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
        "skills": [      "HTML/CSS",       "JavaScript",       "Teaching",       "AJAX"   ],
-       "bioPic": "images/jc.jpg"
+       "bioPic": "images/jc2.jpg"
 };
 
 bio.display = function() {
