@@ -58,7 +58,7 @@ var education = {   
          "degree": "MA",
          "major": ["Chinese Medicine"],
          "date": "2003-2007",
-         "url": "https://www.actcm.edu/"      
+         "url": "https://www.actcm.edu"      
     },        {         
         "name": "Pomona College",
         "location": "Claremont, CA",
@@ -202,40 +202,45 @@ var projects = {
         "dates": "January 2016",
         "description": "A showcase of my front-end work",
         "skills": "JavaScript, HTML, CSS",
-        "images": ["http://placehold.it/350x150"]
+        "images": ["images/Portfolio.jpg"],
+        "url": "http://juancarlucci.github.io/frontend-nanodegree-resume/"
 
     }, {
         "title": "Classic Arcade Game",
         "dates": "March 2016",
         "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
         "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
-        "images": ["http://placehold.it/350x150"]
+        "images": ["images/Game.jpg"],
+        "url": "https://github.com/juancarlucci/frontend-nanodegree-arcade-game"
     }, {
         "title": "Web Optimization",
         "dates": "May 2016",
         "description": "Web performance optimization (WPO), Browser Rendering",
         "skills": "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
-        "images": ["http://placehold.it/350x150"]
-    }, {
-        "title": "Neighborhood Map",
-        "dates": "June 2016",
-        "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
-        "skills": "AJAX, JavaScript Design Patterns",
-        "images": ["http://placehold.it/350x150"]
-    }, {
-        "title": "Health Tracker",
-        "dates": "December, 2015-2016",
-        "description": "A single page tracker for health-related metrics",
-        "skills": "Backbone.js",
-        "images": ["http://placehold.it/350x150"]
-    }, {
-        "title": "Feed Reader Testing",
-        "dates": "December, 2015-2016",
-        "description": "Implementation of 'test-driven development' or TDD",
-        "skills": "JavaScript Testing",
-        "images": ["http://placehold.it/350x150"]
+        "images": ["images/CRP.jpg"],
+        "url": "https://github.com/juancarlucci/frontend-nanodegree-mobile-portfolio/blob/master/README.md"
+    },
+    // {
+    //     "title": "Neighborhood Map",
+    //     "dates": "June 2016",
+    //     "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
+    //     "skills": "AJAX, JavaScript Design Patterns",
+    //     "images": ["http://placehold.it/350x150"]
+    // }, {
+    //     "title": "Health Tracker",
+    //     "dates": "December, 2015-2016",
+    //     "description": "A single page tracker for health-related metrics",
+    //     "skills": "Backbone.js",
+    //     "images": ["http://placehold.it/350x150"]
+    // }, {
+    //     "title": "Feed Reader Testing",
+    //     "dates": "December, 2015-2016",
+    //     "description": "Implementation of 'test-driven development' or TDD",
+    //     "skills": "JavaScript Testing",
+    //     "images": ["http://placehold.it/350x150"]
 
-    }]
+    // }
+  ]
 };
 
 projects.display = function() {
@@ -248,8 +253,10 @@ projects.display = function() {
         $(".project-entry:last").append(formattedDates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
-        // var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
-        // $(".project-entry:last").append(formattedSkills);
+        var formattedUrl = HTMLprojectTitle.replace("%data%", projects.projects[project].url).replace("%url%", projects.projects[project].url);
+        $(".project-entry:last").append(formattedUrl);
+        var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
+        $(".project-entry:last").append(formattedSkills);
 
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
@@ -288,6 +295,6 @@ function inName() {
 
 var name = $("#name").text();
 
-$('#main').append(internationalizeButton);
+// $('#main').append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
