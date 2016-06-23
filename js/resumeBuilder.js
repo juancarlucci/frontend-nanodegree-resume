@@ -216,7 +216,7 @@ work.display();
 
 var projects = {
     "projects": [{
-        "title": "Online Resume",
+        "title": "Online Portfolio",
         "dates": "January 2016",
         "description": "A showcase of my front-end work",
         "skills": "JavaScript, HTML, CSS",
