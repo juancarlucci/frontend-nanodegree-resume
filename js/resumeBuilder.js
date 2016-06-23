@@ -109,7 +109,7 @@ var education = {   
          "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
     }   ]
 };
-
+education.display = function() {
   $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
     education.onlineCourses.forEach(function(onlineCourse) {
         if (education.onlineCourses.length > 0) {
