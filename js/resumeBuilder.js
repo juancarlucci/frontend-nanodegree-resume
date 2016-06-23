@@ -110,38 +110,56 @@ var education = {   
     }   ]
 };
 
-education.display = function() {
-  education.schools.forEach(function(school, index) {
-      if (education.schools.length > 0) {
-        $("#education").append(HTMLschoolStart);
-        var formattedSchool = HTMLschoolName.replace("%data%", school.name);
-        var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
-        var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
-        var formattedSchoolDegree = formattedSchool + formattedDegree;
-        var formattedDates = HTMLschoolDates.replace("%data%", school.date);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
-        $("#education").append(HTMLschoolStart);
-        $(".education-entry:last").append(formattedSchoolDegree);
-        $(".education-entry:last").append(formattedDates);
-        $(".education-entry:last").append(formattedMajor);
-        $("#education").append(HTMLschoolStart);
-        // $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
-    }
-// $("#education").append(HTMLonlineClasses);// displays twice, once in between Pomona and ACTCM, once at end of edu section
-});
-// $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
-  education.onlineCourses.forEach(function(onlineCourse) {
-      if (education.onlineCourses.length > 0) {
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
-        var formattedOnlineTitleOnlineSchool = formattedOnlineTitle + formattedOnlineSchool;
-        var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
-        $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-        var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
-        $(".education-entry:last").append(formattedOnlineDates);
-      }
-    });
+  $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
+    education.onlineCourses.forEach(function(onlineCourse) {
+        if (education.onlineCourses.length > 0) {
+          var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
+          var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
+          var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
+          // var formattedOnlineURLName = HTMLonlineURL.replace("%data%", onlineCourse.school);
+          // $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
+          var formattedOnlineName = HTMLonlineURL.replace("%data%", onlineCourse.school);
+          var finalOnlineNameWLink = formattedOnlineName.replace("#", onlineCourse.url);
+          var formattedOnlineLink = HTMLonlineURL.replace("%data%", onlineCourse.title);
+          var finalOnlineLink = formattedOnlineLink.replace('#', onlineCourse.url);
+          var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
+          var formattedOnlineTitleOnlineSchool = finalOnlineLink + formattedOnlineSchool;
 
+          $("#education").append(HTMLschoolStart);
+          $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
+
+          $(".education-entry:last").append(formattedOnlineDates);
+          // $(".education-entry:last").append(formattedOnlineURL);
+          // $(".education-entry:last").append(finalOnlineNameWLink);
+          // $(".education-entry:last").append(finalOnlineLink);
+          $("#education").append(HTMLschoolStart);
+        }
+      });
+        $("#education").append(HTMLschoolClasses);
+      education.schools.forEach(function(school, index) {
+          if (education.schools.length > 0) {
+            $("#education").append(HTMLschoolStart);
+            var formattedSchool = HTMLschoolName.replace("%data%", school.name);
+            var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
+            var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+            var formattedSchoolLink = HTMLschoolURL.replace("%data%", school.name);
+            var finalSchoolLink = formattedSchoolLink.replace('#', school.url);
+
+            var formattedDates = HTMLschoolDates.replace("%data%", school.date);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+            var formattedSchoolDegree = finalSchoolLink + formattedMajor +formattedDegree;
+
+
+            $("#education").append(HTMLschoolStart);
+            $(".education-entry:last").append(formattedSchoolDegree);
+            $(".education-entry:last").append(formattedDates);
+            // $(".education-entry:last").append(formattedMajor);
+            // $(".education-entry:last").append(formattedSchoolUrl);
+            // $("#education").append(HTMLschoolStart);
+            // $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
+            $("#education").append(HTMLschoolStart);
+        }
+      });
 };
 
 education.display();
