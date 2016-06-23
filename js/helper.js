@@ -45,13 +45,14 @@ var HTMLprojectSkills = '<p class="skillsText">Skills: %data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 var HTMLprojectlURL = '<br><a href="#" target="_blank">%data%</a>';
 
+var HTMLschoolClasses = '<h3>University</h3>';
 var HTMLschoolStart = '<div class="education-entry list-group-item"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em>Major: %data%</em>';
-var HTMLschoolURL = '<br><a href="#"></a>';
+var HTMLschoolURL = '<br><a href="#" target="_blank">%data%</a>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
