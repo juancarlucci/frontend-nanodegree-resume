@@ -1,6 +1,14 @@
-
 /*
-These are HTML strings. Using JavaScript functions to replace the %data% placeholder text you see in them.
+
+This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
+
+Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+
+Cameron Pittman
+*/
+/*
+These are HTML strings. As part of the course, you'll be using JavaScript functions
+replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
@@ -15,21 +23,22 @@ var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbiopic = '<img src="%data%" class="biopic">';
+var HTMLbiopic = '<img class="media-object biopic" alt="Photo of JC" src="%data%">';
 var HTMLwelcomeMsg = '<span class="welcome-message"><br><br>%data%<br><br></span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<h4><a href="#" target="_blank">%data%</h4>';
+var HTMLworkTitle = '<h4> - %data%</a></h4>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><small>%data%</small><br><br></p>';
 
 var HTMLprojectStart = '<div class="online list-group project-entry"></div>';
-var HTMLprojectTitle = '<h3>%data%</h3>';
+var HTMLprojectTitle = '<h4>%data%</h4>';
+// var HTMLprojectTitle = '<a href="%url%">%data%</a>'; //this is an attemt to link to my github pages
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectSkills = '<p class="skillsText">Skills: %data%</p>';
@@ -38,18 +47,18 @@ var HTMLprojectlURL = '<br><a href="#" target="_blank">%data%</a>';
 
 var HTMLschoolClasses = '<h3>University</h3>';
 var HTMLschoolStart = '<div class="education-entry list-group-item"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a href="#" target="_blank">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolDates = '<br><div class="date-text">%data%</div>';
+var HTMLschoolLocation = '<br><div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em>Major: %data%</em>';
-var HTMLschoolURL = '<br><a href="#" target="_blank">%data%</a>';
+var HTMLschoolURL = '<h4><br><a href="#" target="_blank">%data%</a></h4>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<h4><br><a href="#" target="_blank">%data%</a></h4>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -66,6 +75,29 @@ $(document).ready(function() {
     });
 });
 
+//below is the code from mcsLeader, in the forum
+// $(document).ready(function() {
+//     $('button').click(function() {
+//         if (!inName) {
+//           return;
+//         }
+//         var nameFromResume = $('#name').html();
+//         var iName = inName(nameFromResume);
+//         $('#name').html(iName);
+//     });
+// });
+
+/*
+This is the code from Karol, formum mentor
+
+ $(document).ready(function() {
+   $('button').click(function() {
+     var name = $('#name').html();
+     var iName = inName() || function(){};
+     $('#name').html(iName);
+   });
+ });
+ */
 clickLocations = [];
 
 function logClicks(x, y) {
@@ -77,6 +109,7 @@ function logClicks(x, y) {
 }
 
 $(document).click(function(loc) {
+    // your code goes here!
     var x = loc.pageX;
     var y = loc.pageY;
 
@@ -86,10 +119,12 @@ $(document).click(function(loc) {
 
 
 /*
-This generates the custom Google Map for the website.
+This is the fun part. Here's where we generate the custom Google Map for the website.
+See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
 var map; // declares a global map variable
+
 
 /*
 Start here! initializeMap() is called when page is loaded.
