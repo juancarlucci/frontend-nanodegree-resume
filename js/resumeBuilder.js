@@ -38,6 +38,7 @@ bio.display = function() {
     var formattedbioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedbioLocation);
     if (bio.skills.length > 0) {
+        $( "#header" ).append( HTMLskillsStart );
         for (var i = 0; i < bio.skills.length; i ++ ) {
           var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
           $("#skills").append(formattedSkill);
