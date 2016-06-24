@@ -16,15 +16,18 @@ h6 {
     text-align: center;
     color: #999;
 }
+
 .clear-fix {
     overflow: auto;
 }
+
 .education-entry,
 .work-entry,
 .project-entry {
     padding: 0 5%;
     text-align: left;
 }
+
 h1 {
     font-size: 40px;
     font-family: 'Poiret One', cursive;
@@ -33,6 +36,7 @@ h1 {
     line-height: 48px;
     display: inline;
 }
+
 h2 {
     font-weight: bold;
     font-size: 24px;
@@ -41,6 +45,7 @@ h2 {
     line-height: 29px;
     padding: 10px;
 }
+
 h3 {
     font-style: italic;
     font-size: 20px;
@@ -50,6 +55,7 @@ h3 {
     line-height: 22px;
     text-align: left;
 }
+
 h4 {
     font-weight: bold;
     font-size: 20px;
@@ -58,18 +64,21 @@ h4 {
     /*text-transform: uppercase;*/
     text-align: left;
 }
+
 h2,
 h3,
 /*h4,*/
 h5 {
     padding: 10px 5%;
 }
+
 .project-entry h2,
 .project-entry h3,
 .project-entry h4,
 .project-entry h5 {
     padding: 0;
 }
+
 .date-text {
     font-style: italic;
     font-size: 14px;
@@ -77,6 +86,7 @@ h5 {
     line-height: 16px;
     text-align: left;
 }
+
 .location-text {
     font-style: italic;
     font-size: 14px;
@@ -84,18 +94,21 @@ h5 {
     line-height: 16px;
     float: left;
 }
+
 p {
     font-size: 16px;
     color: #999;
     line-height: 30px;
     text-align: left;
 }
+
 a {
     color: #999;
     margin-top: 10px;
     display: block;
     /*display: inline;*/ //this is an atempt to get email link to send email
 }
+
 a:hover {
   color: #f0560b;
 }
@@ -103,12 +116,14 @@ a:hover {
 div.date-text:last-child {
     margin-bottom: 2.5%;
 }
+
 .welcome-message {
     font-style: italic;
     font-size: 1.8em;
     color: #878484;
     line-height: 28px;
 }
+
 #skills-h3 {
     color: #f0560b;
     display: none;
@@ -116,9 +131,11 @@ div.date-text:last-child {
     padding-top: 30px;
     padding-left: 15px;
 }
+
 .skillsText {
     color: #f0560b;
 }
+
 ul skills
 .orange {
     background-color: rgb(255, 255, 255);
@@ -126,21 +143,26 @@ ul skills
     padding-top: 36px;
     font-family: 'Poiret One', cursive;
 }
+
 .orange-text {
     color: #f0560b;
 }
+
 .white-text {
     font-weight: bold;
     color: #878484;
 }
+
 .gray {
     background-color: #f3f3f3;
     padding-bottom: 0px;
     clear: both;
 }
+
 #workExperience {
     padding-bottom: 2.5%;
 }
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -149,35 +171,37 @@ ul skills
     justify-content: space-around;
     padding: 10px;
 }
+
 .center-content {
     padding: 2.5% 5%;
 }
+
 ul {
     list-style-type: none;
 }
+
 .biopic {
     float: left;
     padding: 10px;
     width: 260px;
     /*display: none;*/
 }
+
 img {
     padding: 10px;
 }
+
 span {
     padding: 5px;
     color: #878484;
 }
+
 #lets-connect {
     /*background: url(../images/bg_cracked2.jpg) no-repeat center center fixed;*/
     background-color: rgba(255,255,255,0.6);
     height: 200px;
     text-align: center;
 }
-/*#footerContacts {
-  background-color: rgba(255,255,255,0.8);
-  height: 7em;
-}*/
 
 /* Media queries to handle various device widths */
 
@@ -186,32 +210,39 @@ span {
         margin-top: 5%;
     }
 }
+
 @media only screen and (max-width: 900px) {
     .biopic {
         width: 260px;
     }
 }
+
 @media only screen and (max-width: 650px) {
     #lets-connect {
         margin-top: 10%;
     }
+    
     .biopic {
         width: 150px;
     }
+    
     .welcome-message {
         display: none;
     }
 }
+
 #map {
     display: block;
     height: 100%;
     margin: 0 5%;
 }
+
 #mapDiv {
     height: 400px;
     width: 100%;
     padding-bottom: 5%;
 }
+
 @media only screen and (min-width: 750px) {
     #skills-h3,
     .biopic {
