@@ -164,7 +164,9 @@ var work = {   
                  "title": "Curriculum Coordinator",
                  "location": "Berkeley, CA",
                  "dates": "2000-2003",
-                 "description": "Worked closely with CEL’s Director, founding members (including Fritjof Capra), and main investors to develop content, programs and strategies."      
+                   "description": "Worked closely with CEL’s Director, founding members"+
+                    "(including Fritjof Capra), and main investors to develop content,"+
+                    " programs and strategies."      
     },        {         
         "employer": "Cesar Chavez Elementary School",
                  "title": "Grant Writer/Curriculum Developer/Teacher",
