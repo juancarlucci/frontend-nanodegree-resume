@@ -43,15 +43,6 @@ bio.display = function() {
           var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
           $("#skills").append(formattedSkill);
         }
-        // $("#header").append(HTMLskillsStart);
-        // var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-        // $("#skills").append(formattedSkill);
-        // formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-        // $("#skills").append(formattedSkill);
-        // formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-        // $("#skills").append(formattedSkill);
-        // formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-        // $("#skills").append(formattedSkill);
     }
 };
 bio.display();
@@ -61,15 +52,15 @@ var education = {   
          "name": "American College of Traditional Chinese Medicine",
          "location": "San Francisco, CA",
          "degree": "MA",
-         "major": ["Chinese Medicine"],
-         "date": "2003-2007",
+         "majors": ["Chinese Medicine"],
+         "dates": "2003-2007",
          "url": "https://www.actcm.edu"      
     },        {         
         "name": "Pomona College",
         "location": "Claremont, CA",
          "degree": "BA",
-         "major": ["International Relations"],
-         "date": "1988-1992",
+         "majors": ["International Relations"],
+         "dates": "1988-1992",
          "url": "http://www.pomona.edu/"      
     }   ],
      "onlineCourses": [      {         
@@ -115,28 +106,21 @@ var education = {   
     }   ]
 };
 education.display = function() {
-  $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
+  $("#education").append(HTMLonlineClasses); 
     education.onlineCourses.forEach(function(onlineCourse) {
         if (education.onlineCourses.length > 0) {
           var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
           var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
           var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
-          // var formattedOnlineURLName = HTMLonlineURL.replace("%data%", onlineCourse.school);
-          // $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
           var formattedOnlineName = HTMLonlineURL.replace("%data%", onlineCourse.school);
           var finalOnlineNameWLink = formattedOnlineName.replace("#", onlineCourse.url);
           var formattedOnlineLink = HTMLonlineURL.replace("%data%", onlineCourse.title);
           var finalOnlineLink = formattedOnlineLink.replace('#', onlineCourse.url);
           var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
           var formattedOnlineTitleOnlineSchool = finalOnlineLink + formattedOnlineSchool;
-
           $("#education").append(HTMLschoolStart);
           $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-
           $(".education-entry:last").append(formattedOnlineDates);
-          // $(".education-entry:last").append(formattedOnlineURL);
-          // $(".education-entry:last").append(finalOnlineNameWLink);
-          // $(".education-entry:last").append(finalOnlineLink);
           $("#education").append(HTMLschoolStart);
         }
       });
@@ -149,19 +133,12 @@ education.display = function() {
             var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
             var formattedSchoolLink = HTMLschoolURL.replace("%data%", school.name);
             var finalSchoolLink = formattedSchoolLink.replace('#', school.url);
-
-            var formattedDates = HTMLschoolDates.replace("%data%", school.date);
-            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+            var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
             var formattedSchoolDegree = finalSchoolLink + formattedMajor +formattedDegree;
-
-
             $("#education").append(HTMLschoolStart);
             $(".education-entry:last").append(formattedSchoolDegree);
             $(".education-entry:last").append(formattedDates);
-            // $(".education-entry:last").append(formattedMajor);
-            // $(".education-entry:last").append(formattedSchoolUrl);
-            // $("#education").append(HTMLschoolStart);
-            // $("#education").append(HTMLonlineClasses); //displays twice, once in between Pomona and ACTCM, once at end of edu section
             $("#education").append(HTMLschoolStart);
         }
       });
