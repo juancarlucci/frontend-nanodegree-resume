@@ -254,18 +254,11 @@ projects.display = function() {
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
         var formattedUrl = HTMLprojectlURL.replace("#", projects.projects[project].url).replace("%url%", projects.projects[project].url);
-        // $(".project-entry:last").append(formattedUrl);
         var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
         $(".project-entry:last").append(formattedSkills);
         var formattedProjectlLink = HTMLprojectlURL.replace("%data%", projects.projects[project].title);
         var finalProjectLink = formattedProjectlLink.replace('#', projects.projects[project].url);
         $(".project-entry:last").append(finalProjectLink);
-        // var formattedProjectTitleLink = finalProjectLink + formattedTitle;
-        // $(".project-entry:last").append(formattedProjectTitleLink);
-
-        // $(".project-entry:last").append(formattedProjectlLink);
-        // var formattedSchoolLink = HTMLschoolURL.replace("%data%", school.name);
-        // var finalSchoolLink = formattedSchoolLink.replace('#', school.url);
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
@@ -276,20 +269,6 @@ projects.display = function() {
 };
 projects.display();
 
-
-// //this inName is what I coded, and it did not work
-// function inName(name) {
-//   name = name.trim().split(" ");
-//   //.trim takes out any leading or trailing whitespaces.
-//   console.log(name);
-//   name[1] = name.toUpperCase();
-//   name[0] = name.slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-//
-//   return name [0] + " " +name[1];
-//
-// }
-//
-// $('#main').append(internationalizeButton);
 // Here is the code from mcsLeader
 function inName() {
     var name = window.name;
