@@ -175,24 +175,25 @@ var work = {   
 };
 work.display = function() {
 
-// https://discussions.udacity.com/t/foreach-trouble/160070/7
-work.jobs.forEach(function(job, index) {
-    if (work.jobs.length > 0) {
-        $("#workExperience").append(HTMLworkStart);
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-
-        var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-
-        var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        $(".work-entry:last").append(formattedEmployerTitle);
-
-        var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-        $(".work-entry:last").append(formattedDates);
-
-        var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
-        $(".work-entry:last").append(formattedDescription);
-    }
-  });
+    // https://discussions.udacity.com/t/foreach-trouble/160070/7
+    work.jobs.forEach(function(job, index) {
+        if (work.jobs.length > 0) {
+            $("#workExperience").append(HTMLworkStart);
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+            var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+            var formattedWorkLink = HTMLworkEmployer.replace("%data%", job.employer);
+            var finalWorkLink = formattedWorkLink.replace('#', job.url);
+            var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+            var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+            var formattedEmployerTitle = finalWorkLink+ formattedTitle;
+            // $(".work-entry:last").append(formattedEmployerTitle);
+            $(".work-entry:last").append(finalWorkLink);
+            $(".work-entry:last").append(formattedTitle);
+            $(".work-entry:last").append(formattedDates);
+            // $(".work-entry:last").append(finalWorkLink);
+            $(".work-entry:last").append(formattedDescription);
+        }
+    });
 };
 work.display();
 
