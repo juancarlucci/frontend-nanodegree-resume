@@ -11,7 +11,7 @@ var bio = {
     },
     "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
     "skills": ["HTML/CSS", "JavaScript", "Teaching", "AJAX"],
-    "bioPic": "images/jc2.jpg"
+    "biopic": "images/jc2.jpg"
 };
 
 bio.display = function() {
@@ -20,7 +20,7 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedBioPic = HTMLbiopic.replace("%data%", bio.biopic);
     $("#header").append(formattedBioPic);
     var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedwelcomeMsg);
