@@ -146,34 +146,38 @@ education.display = function() {
 
 education.display();
 
-var work = {   
-    "jobs": [      {         
+var work = {
+    "jobs": [{
         "employer": "Juan Carlos Acupuncture",
-                 "title": "Owner",
-                 "location": "San Francisco, CA",
-                 "dates": "2008-current",
-                 "description": "Provide primary care through acupuncture and Chinese Medicine"      
-    },        {         
+        "title": "Owner",
+        "location": "San Francisco, CA",
+        "url": "http://juancarlosacupuncture.com/",
+        "dates": "2008-current",
+        "description": "Provide primary care through acupuncture and Chinese Medicine"
+    }, {
         "employer": "Academy of Chinese Culture and Health Sciences",
-                 "title": "Associate Professor",
-                 "location": "Oakland, CA",
-                 "dates": "2008-2013",
-                 "description": "Taught Chinese Medicine, Herbology, Formulas"      
-    },        {         
+        "title": "Associate Professor",
+        "location": "Oakland, CA",
+        "url": "http://www.acchs.edu/",
+        "dates": "2008-2013",
+        "description": "Taught Chinese Medicine, Herbology, Formulas"
+    }, {
         "employer": "Center for Ecoliteracy",
-                 "title": "Curriculum Coordinator",
-                 "location": "Berkeley, CA",
-                 "dates": "2000-2003",
-                   "description": "Worked closely with CEL’s Director, founding members"+
-                    "(including Fritjof Capra), and main investors to develop content,"+
-                    " programs and strategies."      
-    },        {         
+        "title": "Curriculum Coordinator",
+        "location": "Berkeley, CA",
+        "url": "http://www.ecoliteracy.org/",
+        "dates": "2000-2003",
+        "description": "Worked closely with CEL’s Director, founding members"+
+        "(including Fritjof Capra), and main investors to develop content,"+
+        " programs and strategies."
+    }, {
         "employer": "Cesar Chavez Elementary School",
-                 "title": "Grant Writer/Curriculum Developer/Teacher",
-                 "location": "San Francisco, CA",
-                 "dates": "1996-2000",
-                 "description": "Lead teacher, curriculum developer and grant writer for a three year, 6-teacher team project"      
-    }   ]
+        "title": "Grant Writer/Curriculum Developer/Teacher",
+        "location": "San Francisco, CA",
+        "url": "http://www.sfusd.edu/",
+        "dates": "1996-2000",
+        "description": "Lead teacher, curriculum developer and grant writer for a three year, 6-teacher team project"
+    }]
 };
 work.display = function() {
 
