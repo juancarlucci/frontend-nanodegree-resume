@@ -43,7 +43,8 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectSkills = '<p class="skillsText">Skills: %data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
-var HTMLprojectlURL = '<br><a href="#" target="_blank">%data%</a>';
+var HTMLprojectlURL = '<h4><br><a href="#" target="_blank">%data%</a></h4>';
+var HTMLprojectUpcoming = '<h3>Upcoming Projects</h3>';
 
 var HTMLschoolClasses = '<h3>University</h3>';
 var HTMLschoolStart = '<div class="education-entry list-group-item"></div>';
