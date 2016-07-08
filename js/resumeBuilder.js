@@ -254,18 +254,16 @@ projects.display = function() {
     for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-        // var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("%url%", projects.projects[project].url);
-        $(".project-entry:last").append(formattedTitle);
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-        $(".project-entry:last").append(formattedDates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-        $(".project-entry:last").append(formattedDescription);
         var formattedUrl = HTMLprojectlURL.replace("#", projects.projects[project].url).replace("%url%", projects.projects[project].url);
         var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
-        $(".project-entry:last").append(formattedSkills);
         var formattedProjectlLink = HTMLprojectlURL.replace("%data%", projects.projects[project].title);
         var finalProjectLink = formattedProjectlLink.replace('#', projects.projects[project].url);
         $(".project-entry:last").append(finalProjectLink);
+        $(".project-entry:last").append(formattedDates);
+        $(".project-entry:last").append(formattedDescription);
+        $(".project-entry:last").append(formattedSkills);
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
