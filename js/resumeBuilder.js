@@ -1,16 +1,16 @@
-var bio = {   
+var bio = {   
     "name": "Juan Carlos Collins",
-       "role": "Web Developer",
-       "contacts": {      
+       "role": "Web Developer",
+       "contacts": {      
         "mobile": "415-641-1939",
-              "email": "juancarloscollins@gmail.com",
-              "linkedin": "juan-carlos-collins/20/883/b89",
-              "github": "juancarlucci",
-              "location": "san francisco, ca"   
+              "email": "juancarloscollins@gmail.com",
+              "linkedin": "juan-carlos-collins/20/883/b89",
+              "github": "juancarlucci",
+              "location": "san francisco, ca"   
     },
-       "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
-       "skills": [      "HTML/CSS",       "JavaScript",       "Teaching",       "AJAX"   ],
-       "biopic": "images/jc2.jpg"
+       "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
+       "skills": [      "HTML/CSS",       "JavaScript",       "Teaching",       "AJAX"   ],
+       "biopic": "images/jc2.jpg"
 };
 
 bio.display = function() {
@@ -47,63 +47,63 @@ bio.display = function() {
 };
 bio.display();
 
-var education = {   
-    "schools": [      {         
+var education = {   
+    "schools": [      {         
          "name": "American College of Traditional Chinese Medicine",
          "location": "San Francisco, CA",
-         "degree": "MA",
-         "majors": ["Chinese Medicine"],
-         "dates": "2003-2007",
-         "url": "https://www.actcm.edu"      
-    },        {         
+         "degree": "MA",
+         "majors": ["Chinese Medicine"],
+         "dates": "2003-2007",
+         "url": "https://www.actcm.edu"      
+    },        {         
         "name": "Pomona College",
         "location": "Claremont, CA",
-         "degree": "BA",
-         "majors": ["International Relations"],
-         "dates": "1988-1992",
-         "url": "http://www.pomona.edu/"      
-    }   ],
-     "onlineCourses": [      {         
+         "degree": "BA",
+         "majors": ["International Relations"],
+         "dates": "1988-1992",
+         "url": "http://www.pomona.edu/"      
+    }   ],
+     "onlineCourses": [      {         
         "title": "Front End Nanodegree",
-         "school": "Udacity",
-         "date": "December 2015 - September 2016",
-         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
-    },        {         
+         "school": "Udacity",
+         "date": "December 2015 - September 2016",
+         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
+    },        {         
         "title": "Intro to JS: Drawing & Animation",
-         "school": "Khan Academy",
-         "date": "January 2016",
-         "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
-    },        {         
+         "school": "Khan Academy",
+         "date": "January 2016",
+         "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
+    },        {         
         "title": "Intro to HTML and CSS",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
-    },        {         
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
+    },        {         
         "title": "Responsive Web Design Fundementals",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud893"      
-    },        {         
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud893"      
+    },        {         
         "title": "Responsive Images",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud882"      
-    },        {         
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud882"      
+    },        {         
         "title": "How to Use Git and GitHub",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud775"      
-    },        {         
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud775"      
+    },        {         
         "title": "JavaScript Basics",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud804"      
-    },        {         
+         "school": "Udacity",
+         "date": "2015",
+         "url": "https://www.udacity.com/courses/ud804"      
+    },        {         
         "title": "CS50: Introduction to Computer Science",
-         "school": "Harvard",
-         "date": "2015",
-         "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
-    }   ]
+         "school": "Harvard",
+         "date": "2015",
+         "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
+    }   ]
 };
 education.display = function() {
   $("#education").append(HTMLonlineClasses); 
@@ -210,7 +210,7 @@ var projects = {
         "description": "A showcase of my front-end work",
         "skills": "JavaScript, HTML, CSS",
         "images": ["images/Portfolio.jpg"],
-        "url": "https://juancarlucci.github.io/portfolio/portfolio_4.html#/"
+        "url": "https://juancarlucci.github.io/porfolio/portfolio_4.html#/"
 
     }, {
         "title": "Classic Arcade Game",
@@ -218,7 +218,7 @@ var projects = {
         "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
         "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
         "images": ["images/Game.jpg"],
-        "url": "https://juancarlucci.github.io/frontend-nanodegree-arcade-game/"
+        "url": "https://github.com/juancarlucci/frontend-nanodegree-arcade-game"
     }, {
         "title": "Web Optimization",
         "dates": "May 2016",
