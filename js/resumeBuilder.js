@@ -210,7 +210,7 @@ var projects = {
         "description": "A showcase of my front-end work",
         "skills": "JavaScript, HTML, CSS",
         "images": ["images/Portfolio.jpg"],
-        "url": "https://juancarlucci.github.io/porfolio/portfolio_4.html#/"
+        "url": "https://juancarlucci.github.io/portfolio/portfolio_4.html#/"
 
     }, {
         "title": "Classic Arcade Game",
@@ -218,7 +218,7 @@ var projects = {
         "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
         "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
         "images": ["images/Game.jpg"],
-        "url": "https://github.com/juancarlucci/frontend-nanodegree-arcade-game"
+        "url": "http://juancarlucci.github.io/frontend-nanodegree-arcade-game/"
     }, {
         "title": "Web Optimization",
         "dates": "May 2016",
