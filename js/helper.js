@@ -135,7 +135,82 @@ function initializeMap() {
     var locations;
 
     var mapOptions = {
-        disableDefaultUI: true
+        mapTypeId:google.maps.MapTypeId.ROADMAP,
+        styles:[
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {"visibility": "on"},
+          { "saturation": -76 },
+          { "color": "#f0560b" },
+          { "weight": 0.1 }
+        ]
+      },
+      {
+        "featureType": "landscape.natural",
+        "stylers": [
+          {"visibility": "on"},
+          { "saturation": -28 },
+          // { "color": "#32302f" },
+          { "color": "#e5e3df" }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "stylers": [
+          {"visibility": "on"},
+          // { "color": "#808080" },
+          { "color": "#e5e3df" }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          { "weight": 0.5 },
+          { "saturation": -71 },
+          { "color": "#f0560b" }
+        ]
+      },{
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#ffffff"}
+        ]
+      },
+        {
+        "featureType": "landscape",
+        "stylers": [
+          { "visibility": "on" },
+          { "color": "#e5e3df" }
+        ]
+      },
+      {
+             "featureType": "landscape",
+             "elementType": "geometry",
+             "stylers": [
+                 {
+                     "hue": "#e3e3e3"
+                 },
+                 {
+                     "saturation": -100
+                 },
+                 {
+                     "lightness": 0
+                 },
+                 {
+                     "visibility": "on"
+                 }
+             ]
+         },
+      {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {"color": "#ffffff"},
+            {"visibility": "on"}
+          ]
+        }
+        ]
     };
 
     /*
@@ -175,7 +250,18 @@ function initializeMap() {
 
         return locations;
     }
-
+    
+    function pinSymbol(color) {
+         return {
+             path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+            //  url: "images/marker_red.svg",
+             fillColor: color,
+             fillOpacity: 1,
+             strokeColor: '#fff',
+             strokeWeight: 1,
+             scale: 1,
+        };
+     }    
     /*
     createMapMarker(placeData) reads Google Places search results to create map pins.
     placeData is the object returned from search results containing information
@@ -188,6 +274,14 @@ function initializeMap() {
         var lon = placeData.geometry.location.lng(); // longitude from the place service
         var name = placeData.formatted_address; // name of the place from the place service
         var bounds = window.mapBounds; // current boundaries of the map window
+        
+        var imageIcon = {
+              url: "images/marker_orange.svg",
+              size: new google.maps.Size(300, 300),
+              origin: new google.maps.Point(10, 10),
+              anchor: new google.maps.Point(20, 20),
+              scaledSize: new google.maps.Size(25, 25)
+            };
 
         // marker is an object with additional data about the pin for a single location
         var marker = new google.maps.Marker({
@@ -195,7 +289,8 @@ function initializeMap() {
             position: placeData.geometry.location,
             title: name,
             // zoom: 13,
-            animation: google.maps.Animation.BOUNCE
+            icon: pinSymbol("#f0560b"),
+            animation: google.maps.Animation.DROP
         });
 
         // infoWindows are the little helper windows that open when you click
