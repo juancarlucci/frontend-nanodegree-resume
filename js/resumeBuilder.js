@@ -218,7 +218,7 @@ var projects = {
         "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
         "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
         "images": ["images/Game.jpg"],
-        "url": "http://juancarlucci.github.io/frontend-nanodegree-arcade-game/"
+        "url": "https://juancarlucci.github.io/frontend-nanodegree-arcade-game/"
     }, {
         "title": "Web Optimization",
         "dates": "May 2016",
