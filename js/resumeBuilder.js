@@ -210,7 +210,7 @@ var projects = {
         "description": "A showcase of my front-end work",
         "skills": "JavaScript, HTML, CSS",
         "images": ["images/Portfolio.jpg"],
-        "url": "https://juancarlucci.github.io/porfolio/portfolio_4.html#/"
+        "url": "https://juancarlucci.github.io/portfolio/portfolio_4.html#/"
 
     }, {
         "title": "Classic Arcade Game",
