@@ -1,24 +1,27 @@
-var bio = {   
+
+var bio = {
     "name": "Juan Carlos Collins",
-       "role": "Web Developer",
-       "contacts": {      
+    "role": "Web Developer",
+    "contacts": {
         "mobile": "415-641-1939",
-              "email": "juancarloscollins@gmail.com",
-              "linkedin": "juan-carlos-collins/20/883/b89",
-              "github": "juancarlucci",
-              "location": "san francisco, ca"   
+        "email": "juancarloscollins@gmail.com",
+        "linkedin": "juan-carlos-collins/20/883/b89",
+        "github": "juancarlucci",
+        "location": ["san francisco, ca", "Guatemala City, Guatemala"]
+
     },
-       "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
-       "skills": [      "HTML/CSS",       "JavaScript",       "Teaching",       "AJAX"   ],
-       "biopic": "images/jc2.jpg"
+    "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
+    "skills": ["HTML/CSS", "JavaScript", "Teaching", "AJAX"],
+    "biopic": "images/jc2.jpg"
 };
 
 bio.display = function() {
 
-    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").prepend(formattedName);
+    $("#title").append(formattedName);
+
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#title").append(formattedRole);
     var formattedBioPic = HTMLbiopic.replace("%data%", bio.biopic);
     $("#header").append(formattedBioPic);
     var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -38,110 +41,159 @@ bio.display = function() {
     var formattedbioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedbioLocation);
     if (bio.skills.length > 0) {
-        $( "#header" ).append( HTMLskillsStart );
+      //
+      $( "#header" ).append( HTMLskillsStart );
         for (var i = 0; i < bio.skills.length; i ++ ) {
           var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
           $("#skills").append(formattedSkill);
         }
+        // switched to the for loop instead of the code below
+        // $("#header").append(HTMLskillsStart);
+        // var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+        // $("#skills").append(formattedSkill);
+        // formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+        // $("#skills").append(formattedSkill);
+        // formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+        // $("#skills").append(formattedSkill);
+        // formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+        // $("#skills").append(formattedSkill);
     }
+
 };
 bio.display();
 
-var education = {   
-    "schools": [      {         
-         "name": "American College of Traditional Chinese Medicine",
-         "location": "San Francisco, CA",
-         "degree": "MA",
-         "majors": ["Chinese Medicine"],
-         "dates": "2003-2007",
-         "url": "https://www.actcm.edu"      
-    },        {         
+var education = {
+    "schools": [{
+        "name": "American College of Traditional Chinese Medicine",
+        "location": "San Francisco, CA",
+        "degree": "MA",
+        "major": ["Chinese Medicine"],
+        "date": "2003-2007",
+        "url": "https://www.actcm.edu"
+    }, {
         "name": "Pomona College",
         "location": "Claremont, CA",
-         "degree": "BA",
-         "majors": ["International Relations"],
-         "dates": "1988-1992",
-         "url": "http://www.pomona.edu/"      
-    }   ],
-     "onlineCourses": [      {         
+        "degree": "BA",
+        "major": ["International Relations"],
+        "date": "1988-1992",
+        "url": "http://www.pomona.edu/"
+    }],
+    "onlineCourses": [{
         "title": "Front End Nanodegree",
-         "school": "Udacity",
-         "date": "December 2015 - December 2016",
-         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"      
-    },        {         
+        "school": "Udacity",
+        "date": "December 2015 - December 2016",
+        "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    }, {
         "title": "Intro to JS: Drawing & Animation",
-         "school": "Khan Academy",
-         "date": "January 2016",
-         "url": "https://www.khanacademy.org/computing/computer-programming/programming"      
-    },        {         
+        "school": "Khan Academy",
+        "date": "January 2016",
+        "url": "https://www.khanacademy.org/computing/computer-programming/programming"
+    }, {
         "title": "Intro to HTML and CSS",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"      
-    },        {         
+        "school": "Udacity",
+        "date": "2015",
+        "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
+    }, {
         "title": "Responsive Web Design Fundementals",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud893"      
-    },        {         
+        "school": "Udacity",
+        "date": "2015",
+        "url": "https://www.udacity.com/courses/ud893"
+    }, {
         "title": "Responsive Images",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud882"      
-    },        {         
+        "school": "Udacity",
+        "date": "2015",
+        "url": "https://www.udacity.com/courses/ud882"
+    }, {
         "title": "How to Use Git and GitHub",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud775"      
-    },        {         
+        "school": "Udacity",
+        "date": "2015",
+        "url": "https://www.udacity.com/courses/ud775"
+    }, {
         "title": "JavaScript Basics",
-         "school": "Udacity",
-         "date": "2015",
-         "url": "https://www.udacity.com/courses/ud804"      
-    },        {         
+        "school": "Udacity",
+        "date": "2015",
+        "url": "https://www.udacity.com/courses/ud804"
+    }, {
         "title": "CS50: Introduction to Computer Science",
-         "school": "Harvard",
-         "date": "2015",
-         "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"      
-    }   ]
+        "school": "Harvard, online",
+        "date": "2015",
+        "url": "http://online-learning.harvard.edu/course/cs50-introduction-computer-science"
+    } , {
+        "title": "ENGN 48L: Intro To Engineering & Technology",
+        "school": "CCSF",
+        "date": "2014",
+        "url": "http://www.ccsf.edu/Schedule/Fall/CD/ENGN%2048L.htm"
+    }, {
+        "title": "GRPH 98A/98B: Beginning/Advanced Photoshop",
+        "school": "CCSF",
+        "date": "2013 - 2014",
+        "url": "https://ccsfv155.wordpress.com/"
+    }, {
+        "title": "GRPH 100A/100B: Beginning/Advanced Illustrator",
+        "school": "CCSF",
+        "date": "2013 - 2014",
+        "url": "https://ccsf.curricunet.com/Report/Course/GetReport/1324?reportId=28"
+    }, {
+        "title": "MMSP 140: Flash Essentials",
+        "school": "CCSF",
+        "date": "2013",
+        "url": "http://www.ccsf.edu/Schedule/CD/VMD%20156.htm"
+    }, {
+        "title": "CNIT 131: Internet Basics and Beginning HTML",
+        "school": "CCSF",
+        "date": "2013",
+        "url": "http://www.ccsf.edu/Schedule/Fall/CD/CNIT%20131.htm"
+    }, {
+        "title": "GRPH 25: Digital Skills for Visual Media",
+        "school": "CCSF",
+        "date": "2013",
+        "url": "http://www.ccsf.edu/Schedule/Spring/CD/VMD%20105.htm"
+    }
+  ]
 };
 education.display = function() {
-  $("#education").append(HTMLonlineClasses); 
+    $("#education").append(HTMLonlineClasses); //this makes it display once, at end of ed section
     education.onlineCourses.forEach(function(onlineCourse) {
         if (education.onlineCourses.length > 0) {
-          var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
-          var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
-          var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
-          var formattedOnlineName = HTMLonlineURL.replace("%data%", onlineCourse.school);
-          var finalOnlineNameWLink = formattedOnlineName.replace("#", onlineCourse.url);
-          var formattedOnlineLink = HTMLonlineURL.replace("%data%", onlineCourse.title);
-          var finalOnlineLink = formattedOnlineLink.replace('#', onlineCourse.url);
-          var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
-          var formattedOnlineTitleOnlineSchool = finalOnlineLink + formattedOnlineSchool;
-          $("#education").append(HTMLschoolStart);
-          $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
-          $(".education-entry:last").append(formattedOnlineDates);
-          $("#education").append(HTMLschoolStart);
+            // var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
+            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
+            var formattedOnlineURL = HTMLonlineURL.replace("#", onlineCourse.url);
+            var formattedOnlineName = HTMLonlineURL.replace("%data%", onlineCourse.school);
+            var finalOnlineNameWLink = formattedOnlineName.replace("#", onlineCourse.url);
+            var formattedOnlineLink = HTMLonlineURL.replace("%data%", onlineCourse.title);
+            var finalOnlineLink = formattedOnlineLink.replace('#', onlineCourse.url);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineCourse.date);
+            var formattedOnlineTitleOnlineSchool = finalOnlineLink + formattedOnlineSchool;
+
+            $("#education").append(HTMLschoolStart);
+            $(".education-entry:last").append(formattedOnlineTitleOnlineSchool);
+
+            $(".education-entry:last").append(formattedOnlineDates);
+            // $(".education-entry:last").append(formattedOnlineURL);
+            // $(".education-entry:last").append(finalOnlineNameWLink);
+            // $(".education-entry:last").append(finalOnlineLink);
+            // $("#education").append(HTMLschoolStart);
         }
-      });
-        $("#education").append(HTMLschoolClasses);
-      education.schools.forEach(function(school, index) {
-          if (education.schools.length > 0) {
+    });
+    $("#education").append(HTMLschoolClasses);
+    education.schools.forEach(function(school, index) {
+        if (education.schools.length > 0) {
             $("#education").append(HTMLschoolStart);
             var formattedSchool = HTMLschoolName.replace("%data%", school.name);
             var formattedSchoolUrl = HTMLschoolURL.replace("#", school.url);
             var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
             var formattedSchoolLink = HTMLschoolURL.replace("%data%", school.name);
             var finalSchoolLink = formattedSchoolLink.replace('#', school.url);
-            var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
-            var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
-            var formattedSchoolDegree = finalSchoolLink + formattedMajor +formattedDegree;
-            $("#education").append(HTMLschoolStart);
+            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+            var formattedDates = HTMLschoolDates.replace("%data%", school.date);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+            var formattedSchoolDegree = finalSchoolLink + formattedMajor + formattedDegree + formattedSchoolLocation;
+
             $(".education-entry:last").append(formattedSchoolDegree);
             $(".education-entry:last").append(formattedDates);
-            $("#education").append(HTMLschoolStart);
+            // $("#education").append(HTMLschoolStart);
         }
-      });
+    });
 };
 
 education.display();
@@ -205,58 +257,81 @@ work.display();
 
 var projects = {
     "projects": [{
-        "title": "Online Portfolio",
-        "dates": "January 2016",
-        "description": "A showcase of my front-end work",
-        "skills": "JavaScript, HTML, CSS",
-        "images": ["images/Portfolio.jpg"],
-        "url": "https://juancarlucci.github.io/portfolio/portfolio_4.html#/"
+            "title": "Online Resume",
+            "dates": "January 2016",
+            "description": "A showcase of my front-end work",
+            "skills": "JavaScript, HTML, CSS",
+            "images": ["images/Portfolio.jpg"],
+            "url": "https://juancarlucci.github.io/porfolio/portfolio_4.html#/"
 
-    }, {
-        "title": "Classic Arcade Game",
-        "dates": "March 2016",
-        "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
-        "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
-        "images": ["images/Game.jpg"],
-        "url": "http://juancarlucci.github.io/frontend-nanodegree-arcade-game/"
-    }, {
-        "title": "Web Optimization",
-        "dates": "May 2016",
-        "description": "Web performance optimization (WPO), Browser Rendering",
-        "skills": "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
-        "images": ["images/CRP.jpg"],
-        "url": "https://github.com/juancarlucci/frontend-nanodegree-mobile-portfolio/blob/master/README.md"
-    },
+        }, {
+            "title": "Classic Arcade Game",
+            "dates": "March 2016",
+            "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
+            "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
+            "images": ["images/Game.jpg"],
+            "url": "https://github.com/juancarlucci/frontend-nanodegree-arcade-game"
+        }, {
+            "title": "Web Optimization",
+            "dates": "May 2016",
+            "description": "Web performance optimization (WPO), Browser Rendering",
+            "skills": "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
+            "images": ["images/CRP.jpg"],
+            "url": "https://github.com/juancarlucci/frontend-nanodegree-mobile-portfolio/blob/master/README.md"
+        },
+        {
+            "title": "Upcoming Project: Neighborhood Map",
+            "dates": "November 2016",
+            "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
+            "skills": "AJAX, JavaScript Design Patterns",
+            "images": ["images/Map.jpg"]
+        }, {
+            "title": "Upcoming Project: Health Tracker",
+            "dates": "December 2016",
+            "description": "A single page tracker for health-related metrics",
+            "skills": "Backbone.js",
+            "images": ["images/health.jpg"]
+        }, {
+            "title": "Upcoming Project: Feed Reader Testing",
+            "dates": "December 2016",
+            "description": "Implementation of 'test-driven development' or TDD",
+            "skills": "JavaScript Testing",
+            "images": ["images/feeder.jpg"]
+
+        }
+    ],
+    // "upcomingProjects":[
     // {
     //     "title": "Neighborhood Map",
     //     "dates": "June 2016",
     //     "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
     //     "skills": "AJAX, JavaScript Design Patterns",
-    //     "images": ["http://placehold.it/350x150"]
+    //     "images": ["images/Map.jpg"]
     // }, {
     //     "title": "Health Tracker",
     //     "dates": "December, 2015-2016",
     //     "description": "A single page tracker for health-related metrics",
     //     "skills": "Backbone.js",
-    //     "images": ["http://placehold.it/350x150"]
+    //     "images": ["images/health.jpg"]
     // }, {
     //     "title": "Feed Reader Testing",
     //     "dates": "December, 2015-2016",
     //     "description": "Implementation of 'test-driven development' or TDD",
     //     "skills": "JavaScript Testing",
-    //     "images": ["http://placehold.it/350x150"]
-
-    // }
-  ]
+    //     "images": ["images/feeder.jpg"]
+    //
+    // }]
 };
 
 projects.display = function() {
     for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        // var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("%url%", projects.projects[project].url);
         var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         var formattedUrl = HTMLprojectlURL.replace("#", projects.projects[project].url).replace("%url%", projects.projects[project].url);
+        // $(".project-entry:last").append(formattedUrl);
         var formattedSkills = HTMLprojectSkills.replace("%data%", projects.projects[project].skills);
         var formattedProjectlLink = HTMLprojectlURL.replace("%data%", projects.projects[project].title);
         var finalProjectLink = formattedProjectlLink.replace('#', projects.projects[project].url);
@@ -264,6 +339,8 @@ projects.display = function() {
         $(".project-entry:last").append(formattedDates);
         $(".project-entry:last").append(formattedDescription);
         $(".project-entry:last").append(formattedSkills);
+
+
         if (projects.projects[project].images.length > 0) {
             for (var image in projects.projects[project].images) {
                 var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
@@ -271,22 +348,28 @@ projects.display = function() {
             }
         }
     }
+
+    // $("#projects").append(HTMLprojectUpcoming);
+    //   projects.upcomingProjects.forEach(function(upcomingProjects, index) {
+    //     if (projects.upcomingProjects.length > 0) {
+    //         $("#projects").append(HTMLprojectStart);
+    //         var formattedUpcomingTitle = HTMLprojectTitle.replace("%data%", projects.upcomingProjects[project].title);
+    //         var formattedUpcomingDates = HTMLprojectDates.replace("%data%", projects.upcomingProjects[project].dates);
+    //         var formattedUpcomingDescription = HTMLprojectDescription.replace("%data%", projects.upcomingProjects[project].description);
+    //         var formattedUpcomingUrl = HTMLprojectlURL.replace("#", projects.upcomingProjects[project].url).replace("%url%", projects.upcomingProjects[project].url);
+    //         // $(".project-entry:last").append(formattedUrl);
+    //         var formattedUpcomingSkills = HTMLprojectSkills.replace("%data%", projects.upcomingProjects[project].skills);
+    //         var formattedUpcomingProjectlLink = HTMLprojectlURL.replace("%data%", projects.upcomingProjects[project].title);
+    //         var finalUpcomingProjectLink = formattedProjectlLink.replace('#', projects.upcomingProjects[project].url);
+    //         $(".project-entry:last").append(formattedUpcomingTitle);
+    //         $(".project-entry:last").append(formattedUpcomingDates);
+    //         $(".project-entry:last").append(formattedUpcomingDescription);
+    //         $(".project-entry:last").append(formattedUpcomingSkills);
+    //     }
+    //   });
 };
+
 projects.display();
 
-// Here is the code from mcsLeader
-function inName() {
-    var name = window.name;
-    name = name.trim().split(" ");
-    console.log(name);
-    name[1] = name[1].toUpperCase();
-    name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
-
-    return name[0] + " " + name[1];
-}
-
-var name = $("#name").text();
-
-// $('#main').append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
