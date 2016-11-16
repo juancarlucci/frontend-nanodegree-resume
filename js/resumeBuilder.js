@@ -285,7 +285,7 @@ var projects = {
             "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
             "skills": "AJAX, JavaScript Design Patterns",
             "images": ["images/Map.jpg"],
-            "url": 
+            "url": "https://juancarlucci.github.io/map/"
         }, 
 //             {
 //             "title": "Upcoming Project: Health Tracker",
