@@ -270,7 +270,7 @@ var projects = {
             "description": "Frogger, look out!. Single page responsive application developed using HTML-5 Canvas. Hosted on GitHub.",
             "skills": "Object-Oriented JavaScript, HTML-5 Canvas",
             "images": ["images/Game.jpg"],
-            "url": "https://github.com/juancarlucci/frontend-nanodegree-arcade-game"
+            "url": "https://juancarlucci.github.io/arcade-game/"
         }, {
             "title": "Web Optimization",
             "dates": "May 2016",
@@ -280,23 +280,27 @@ var projects = {
             "url": "https://github.com/juancarlucci/frontend-nanodegree-mobile-portfolio/blob/master/README.md"
         },
         {
-            "title": "Upcoming Project: Neighborhood Map",
+            "title": "Neighborhood Map",
             "dates": "November 2016",
             "description": "Here be dragons! Includes: map markers, a search function, and a listview to support simple browsing of all locations",
             "skills": "AJAX, JavaScript Design Patterns",
-            "images": ["images/Map.jpg"]
-        }, {
-            "title": "Upcoming Project: Health Tracker",
-            "dates": "December 2016",
-            "description": "A single page tracker for health-related metrics",
-            "skills": "Backbone.js",
-            "images": ["images/health.jpg"]
-        }, {
-            "title": "Upcoming Project: Feed Reader Testing",
-            "dates": "December 2016",
+            "images": ["images/Map.jpg"],
+            "url": 
+        }, 
+//             {
+//             "title": "Upcoming Project: Health Tracker",
+//             "dates": "December 2016",
+//             "description": "A single page tracker for health-related metrics",
+//             "skills": "Backbone.js",
+//             "images": ["images/health.jpg"]
+//         },
+                 {
+            "title": "Feed Reader Testing",
+            "dates": "November 2016",
             "description": "Implementation of 'test-driven development' or TDD",
             "skills": "JavaScript Testing",
-            "images": ["images/feeder.jpg"]
+            "images": ["images/feeder.jpg"],
+            "url": "https://github.com/juancarlucci/feedreader"
 
         }
     ],
