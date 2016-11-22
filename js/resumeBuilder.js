@@ -7,7 +7,7 @@ var bio = {
         "email": "juancarloscollins@gmail.com",
         "linkedin": "juan-carlos-collins/20/883/b89",
         "github": "juancarlucci",
-        "location": ["san francisco, ca", "Guatemala City, Guatemala"]
+        "location": ["san francisco, ca"]
 
     },
     "welcomeMessage": "As a front-end developer, my guiding principles include <br>responsive, maintainable, and engaging web development.",
