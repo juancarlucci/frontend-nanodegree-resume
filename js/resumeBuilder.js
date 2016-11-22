@@ -277,7 +277,7 @@ var projects = {
             "description": "Web performance optimization (WPO), Browser Rendering",
             "skills": "Targeted Page Speed, Critical Rendering Path, Chrome Developer Tools",
             "images": ["images/CRP.jpg"],
-            "url": "https://github.com/juancarlucci/frontend-nanodegree-mobile-portfolio/blob/master/README.md"
+            "url": "https://github.com/juancarlucci/optimize"
         },
         {
             "title": "Neighborhood Map",
