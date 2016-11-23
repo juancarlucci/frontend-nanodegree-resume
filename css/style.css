@@ -21,6 +21,12 @@ h6 {
     overflow: auto;
 }
 
+#title {
+  height: 200px;
+  padding-top: 100px;
+/*   display: inline-block; */
+}
+
 .education-entry,
 .work-entry,
 .project-entry {
