@@ -5,7 +5,7 @@ var bio = {
     "contacts": {
         "mobile": "415-641-1939",
         "email": "juancarloscollins@gmail.com",
-        "linkedin": "juan-carlos-collins/20/883/b89",
+        "linkedin": "https://www.linkedin.com/in/juancarloscollins",
         "github": "juancarlucci",
         "location": ["san francisco, ca"]
 
@@ -257,7 +257,7 @@ work.display();
 
 var projects = {
     "projects": [{
-            "title": "Online Resume",
+            "title": "Online Portfolio",
             "dates": "January 2016",
             "description": "A showcase of my front-end work",
             "skills": "JavaScript, HTML, CSS",
